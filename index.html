@@ -188,6 +188,15 @@ details .body p:last-child{margin-bottom:0}
 .btn.ghost:hover{background:var(--cream)}
 .btnrow{display:flex;flex-wrap:wrap;gap:10px}
 
+/* toc */
+.toc{margin-top:22px}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.toc-grid a{display:block;background:var(--paper);border:1px solid var(--line);
+  border-radius:10px;padding:10px 12px;text-decoration:none}
+.toc-grid a .t{display:block;font-weight:700;color:var(--ink);font-size:13.5px}
+.toc-grid a .d{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+@media(max-width:420px){.toc-grid{grid-template-columns:1fr}}
+
 /* notes */
 .note{border-left:3px solid var(--bronze);background:rgba(164,118,69,.07);
   padding:12px 15px;border-radius:0 10px 10px 0;font-size:14px;margin:14px 0 0;color:var(--muted)}
@@ -230,6 +239,25 @@ footer .sig{font-family:'DM Serif Display',serif;font-size:19px;color:var(--ink)
     <a class="btn" id="waLink" href="#">Message your host</a>
     <a class="btn ghost" id="mapLink" href="#" target="_blank" rel="noopener">Open in Maps</a>
   </div>
+
+  <nav class="toc">
+    <p class="eyebrow">Jump to</p>
+    <div class="toc-grid">
+      <a href="#arrival"><span class="t">Arrival &amp; departure</span><span class="d">Check-in code, keys, check-out time</span></a>
+      <a href="#included"><span class="t">What's in the apartment</span><span class="d">Amenities & what's provided</span></a>
+      <a href="#rules"><span class="t">House rules</span><span class="d">Quiet hours, guests, smoking</span></a>
+      <a href="#building"><span class="t">Your building</span><span class="d">Elevator, mailbox, rubbish room</span></a>
+      <a href="#doorstep"><span class="t">Your street</span><span class="d">Right outside the door</span></a>
+      <a href="#eat"><span class="t">Eating around the city</span><span class="d">Cafes, restaurants, delivery</span></a>
+      <a href="#night"><span class="t">Saigon nights, sorted</span><span class="d">Bars & nightlife</span></a>
+      <a href="#do"><span class="t">Things to do</span><span class="d">Sights & activities</span></a>
+      <a href="#shopping"><span class="t">Shopping</span><span class="d">Malls, markets, convenience</span></a>
+      <a href="#health"><span class="t">Feeling unwell or hurt?</span><span class="d">Pharmacy & clinics nearby</span></a>
+      <a href="#fitness"><span class="t">Gyms & combat sports</span><span class="d">Gyms, Muay Thai, running</span></a>
+      <a href="#practical"><span class="t">Practical bits</span><span class="d">SIM cards, ATMs, laundry, visa</span></a>
+      <a href="#contact"><span class="t">Need anything?</span><span class="d">Message your host</span></a>
+    </div>
+  </nav>
 
   <!-- ============ ARRIVAL ============ -->
   <section id="arrival">
