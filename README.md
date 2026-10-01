@@ -1,6 +1,6 @@
 # Veluxe Stay — Tresor Guest Guide
 
-**Status: content complete, zero open TODOs.** Started late night 2026-07-29 from the Rivergate template, then filled in over the following days with real facts from Tony (parking rates, wifi, door lock process, street-level spots, ATM, rubbish room photos, luggage storage, pharmacy, Korean restaurant name). All travel times independently verified against live Google Maps directions from Tresor's actual address, not copied estimates. Not yet deployed — see Deploy status below.
+**Status: content complete, zero open TODOs.** Started late night 2026-07-29 from the Rivergate template, then filled in over the following days with real facts from Tony (parking rates, wifi, door lock process, street-level spots, ATM, rubbish room photos, luggage storage, pharmacy, Korean restaurant name). All travel times independently verified against live Google Maps directions from Tresor's actual address, not copied estimates. Published; see Deploy status below for the current deployment status.
 
 ## What's confirmed
 - Address: Tresor Apartments, 39-39B Bến Vân Đồn, District 4
@@ -23,15 +23,24 @@
 - Some travel times (WinMart hours, a few "best route" driving estimates) are reasonable defaults rather than personally walked/confirmed
 
 ## Deploy status
-Not created yet — no GitHub repo, no CNAME, no QR code. Whenever Tony's ready to go live, same flow as SOHO/Rivergate:
-1. Create GitHub repo under `veluxegroupvn` (e.g. `tresor-guide`), empty, no README/gitignore
-2. `git init`, add a `CNAME` file for `tresor.veluxestay.com`, push
-3. Settings → Pages → Deploy from main / root, confirm custom domain
-4. GoDaddy DNS → CNAME record: Name `tresor`, Value `veluxegroupvn.github.io`
-5. Generate a QR code (VS mark + "TRESOR" label, same style as the other two)
+Published at https://tresor.veluxestay.com through the `veluxegroupvn/tresor-guide` GitHub repository, using `main` and the repository root.
+
+The navigation redesign dated 2026-10-01 is included in main. GitHub Pages publishes changes automatically after a successful push.
 
 ## Note on ownership
 Tresor is co-owned with Sean (per CLAUDE.md), unlike SOHO/Rivergate which are 100% Tony's. Doesn't affect the guest-facing guide itself, but worth knowing if branding/signoff decisions come up.
 
 ## To edit
 Open `index.html`, search for `const CONFIG` near the bottom for wifi/checkin/host/maps fields. Everything else is plain HTML further up, organized by `<section id="...">` blocks — same structure as SOHO and Rivergate.
+
+## Navigation redesign, 2026-10-01
+
+The opening shows WiFi, the driver address, stay times and host contact. A sticky “Find something” menu replaces the 13 card contents grid. Six groups provide short descriptions and direct links to individual answers. Links open the relevant accordion automatically, including when a guest opens a URL with a fragment. Escape closes the menu.
+
+Luggage has its own answer and retains the property's existing policy. Rubbish photos are preserved and shown on request. Nearby food and Grab delivery appear first in the food section. Attraction and mall durations explicitly say “by car”. All other local durations retain each building's own starting point.
+
+Browser validation covers all three guides at widths of 320, 390, 430, 768 and 1280 pixels, all 29 unique menu destinations, keyboard dismissal, copy buttons, photo preservation and existing extras and late check out prices.
+
+Tresor route corrections: Phở SOL and Eatlah are each 6 minutes on foot, replacing the 15 minute figures copied into the food section. Nguyễn Huệ is labelled as about 15 to 20 minutes walking or around 10 minutes by car; Google Maps showed 17 and 9 minutes respectively during the check. Millennium at 132 Bến Vân Đồn is 7 minutes walking, independently rechecked on 2026-10-01. WinMart is consistently 1 minute away. The house rules now match the existing rubbish section's 3,000,000 VND fee.
+
+Luggage remains free before check in. After check out, 70,000 VND covers one large suitcase or one small suitcase plus a bag until 5pm, then 50,000 VND per hour.
